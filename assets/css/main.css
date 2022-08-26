@@ -1808,7 +1808,7 @@ article#work {
 }
 
 .project:not(:nth-last-of-type(1)) {
-  margin-right: 53.33px;
+  margin-right: 54px;
 }
 
 article#work {
