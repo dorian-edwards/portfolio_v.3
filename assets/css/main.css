@@ -1797,18 +1797,18 @@ body.is-preload #footer {
 
 article#work {
   display: flex;
-  scroll-snap-type: x mandatory;
+  flex-direction: column;
+  scroll-snap-type: y mandatory;
   overflow-x: scroll;
   scroll-behavior: smooth;
+  max-height: 70vh;
 }
 
 .project {
-  flex: 0 0 100%;
+  flex: 0 0 70vh;
   scroll-snap-align: center;
-}
-
-.project:not(:nth-last-of-type(1)) {
-  margin-right: 54px;
+  display: flex;
+  align-items: center;
 }
 
 article#work {
@@ -1835,4 +1835,35 @@ article#work::-webkit-scrollbar {
 
 .project-link span {
   font-size: 30px;
+}
+
+@media screen and (min-width: 736px) {
+  article#work {
+    max-height: 80vh;
+  }
+  .project {
+    flex: 0 0 80vh;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 720px) {
+  .content-wrapper {
+    display: flex;
+    column-gap: 3rem;
+    align-items: center;
+  }
+
+  .lndscp-title {
+    width: 60%;
+  }
+
+  .lndscp-content {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project__flex-item p {
+    margin-bottom: 1rem;
+  }
 }
