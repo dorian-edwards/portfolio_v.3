@@ -1795,6 +1795,14 @@ body.is-preload #footer {
 
 /* After market additions */
 
+.hidden {
+  position: absolute;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  z-index: -999;
+}
+
 article#work {
   display: flex;
   flex-direction: column;
